@@ -3,7 +3,12 @@ const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs');
 
+console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+
 const TESTENV = path.resolve(__dirname, '..', 'testenv');
+
+
+
 if (fs.existsSync(TESTENV)) {
   const envConfig = dotenv.parse(fs.readFileSync(TESTENV));
   Object.keys(envConfig).forEach((k) => {
